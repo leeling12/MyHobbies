@@ -76,7 +76,7 @@
         </nav>
 
         <main class="py-4">
-            @if($errors->any())
+        <!--    @if($errors->any())
                 <div class="container">
                     <div class="alert alert-danger" role="alert">
                         <ul class="mb-0">
@@ -86,7 +86,7 @@
                         </ul>
                     </div>
                 </div>
-            @endif
+            @endif -->
 
             @yield('content')
         </main>
