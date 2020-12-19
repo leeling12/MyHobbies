@@ -42,6 +42,13 @@ class HobbyController extends Controller
     public function store(Request $request)
     {
         //dd('store');
+
+        //validation
+        $request->validate([
+            'name' => 'required|min:3',
+            'description' => 'required|min:5',
+        ]);
+
         $hobby = new Hobby([
             //'name' => $request->name,
             'name' => $request['name'],
