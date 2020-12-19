@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+<!--the descriotion show under the title when search -->
+<!-- to overrride the content -->
+@section('page_description')
+@section('page_title', 'About this project')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
