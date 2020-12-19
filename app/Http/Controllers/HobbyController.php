@@ -30,7 +30,7 @@ class HobbyController extends Controller
      */
     public function create()
     {
-        //
+        return view('hobby.create');
     }
 
     /**
@@ -41,7 +41,15 @@ class HobbyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd('store');
+        $hobby = new Hobby([
+            //'name' => $request->name,
+            'name' => $request['name'],
+            'description' => $request['description'],
+        ]);
+        $hobby->save();
+        //redirect back index page
+        return $this->index();
     }
 
     /**
