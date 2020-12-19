@@ -12,10 +12,15 @@ class HobbyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($name, $age)
+    public function index()
     {
+        $hobbies = Hobby::all();
+
+        return view('hobby.index')->with([
+            'hobbies' => $hobbies
+        ]);
         //dd = die + dump
-        dd($name. " is " . $age . " years old.");
+        //dd($hobbies);
     }
 
     /**
