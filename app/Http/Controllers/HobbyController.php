@@ -126,6 +126,14 @@ class HobbyController extends Controller
      */
     public function destroy(Hobby $hobby)
     {
-        //
+        $oldName = $hobby->name;
+        $hobby->delete();
+
+         //redirect back index page
+         return $this->index()->with(
+             [
+                 'message_success' => "The hobby <b>". $oldName . "</b> was updated."
+             ]
+         );
     }
 }
