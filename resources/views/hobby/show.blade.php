@@ -10,6 +10,9 @@
                 <div class="card-body">
                    <b>{{ $hobby->name }}</b>
                    <p>{{ $hobby->description }}</p>
+                   @foreach($hobby->tags as $tag)
+                        <a href=""><span class="badge badge-{{ $tag->style }}">{{ $tag->name }}</span></a>
+                    @endforeach
                 </div>
             </div>
 
