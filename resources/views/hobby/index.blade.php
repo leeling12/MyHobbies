@@ -20,6 +20,8 @@
                                 <input class="btn btn-sm btn-outline-danger" type="submit" value="Delete">
                             </form>
                             @endauth
+                            <!-- display date -->
+                            <span class="float-right mx-2"> {{ $hobby->created_at->diffForHumans()}}</span>
                             </li>
                         @endforeach
                    </ul>
@@ -35,7 +37,7 @@
                 <a class="btn btn-success btn-sm" href="/hobby/create"><i class="fas fa-pus-circle"></i>Create new Hobby</a>
             </div>
             @endauth
-            
+
         </div>
     </div>
 </div>
