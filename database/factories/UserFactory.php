@@ -18,6 +18,7 @@ use Illuminate\Support\Str;
 */
 
 //create random data
+//$faker -> fake data
 $factory->define(User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
