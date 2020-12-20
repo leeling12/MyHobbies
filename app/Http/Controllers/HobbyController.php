@@ -132,7 +132,7 @@ class HobbyController extends Controller
          //redirect back index page
          return $this->index()->with(
              [
-                 'message_success' => "The hobby <b>". $oldName . "</b> was updated."
+                 'message_success' => "The hobby <b>". $oldName . "</b> was deleted."
              ]
          );
     }
