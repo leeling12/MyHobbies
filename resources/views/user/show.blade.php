@@ -8,8 +8,8 @@
                 <div class="card-header">{{ $user->name }}</div>
 
                 <div class="card-body">
-                   <p>{{ $user->motto }}</p>
-                   <p>{{ $user->about_me }}</p>
+                   <p><b>My Motto:</b><br>{{ $user->motto }}</p>
+                   <p class="mt-2"><b>Abour Me:</b><br>{{ $user->about_me }}</p>
                 </div>
             </div>
 
